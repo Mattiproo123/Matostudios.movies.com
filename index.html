@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>MaTo Studios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>MaTo Studios</h1>
+        <div class="row">
+            <div  class="col">
+                <div class="feature-img">
+                    <img src="Media/Kuva.JPG" width="100%">
+                    <img src="Media/Play-PNG-Picture.png" class="play-btn" onclick="playVideo('Media/Mato.mp4')">
+                </div>
+            </div>
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="Media/Kuva3.png">
+                        <img src="Media/Play-PNG-Picture.png" class="play-btn" onclick="playVideo('Media/Bisness.mp4')">
+                    </div>
+                    <p>Bisnes Mies</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-player" id="videoPlayer">
+        <video width="100%" controls autoplay id="myVideo">
+            <source src="Media/Mato.mp4" type="video/mp4">
+        </video>
+        <img src="Media/Close.png" class="close-btn" onclick="stopVideo()">
+    </div>
+
+
+<script>
+    var videoPlayer = document.getElementById("videoPlayer");
+    var myVideo = document.getElementById("myVideo");
+
+    function stopVideo(){
+
+        videoPlayer.style.display = "none";
+
+    }
+
+
+
+
+    function playVideo(file){
+        myVideo.src = file;
+        videoPlayer.style.display = "block";
+    }
+
+</script>
+
+
+
+
+
+</body>
+</html>
